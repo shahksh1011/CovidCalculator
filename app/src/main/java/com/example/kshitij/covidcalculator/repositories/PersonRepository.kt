@@ -4,6 +4,7 @@ import androidx.annotation.WorkerThread
 import androidx.lifecycle.LiveData
 import com.example.kshitij.covidcalculator.data.Person
 import com.example.kshitij.covidcalculator.data.PersonDao
+import com.example.kshitij.covidcalculator.data.PersonHealthDao
 
 class PersonRepository(private val personDao: PersonDao) {
     val allPeople: LiveData<List<Person>> = personDao.getAllPeople()

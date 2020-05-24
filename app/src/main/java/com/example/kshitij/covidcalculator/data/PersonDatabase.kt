@@ -14,9 +14,9 @@ import kotlinx.coroutines.launch
 
 @Database(entities = [Person::class], version = 1)
 abstract class PersonDatabase : RoomDatabase() {
-//    abstract fun PersonHealthDao() : PersonHealthDao
-//
-//    abstract fun PersonDao():PersonDao
+    abstract fun PersonHealthDao() : PersonHealthDao
+
+    abstract fun PersonDao():PersonDao
     companion object{
         @Volatile
         private var INSTANCE: PersonDatabase? = null
@@ -50,7 +50,7 @@ abstract class PersonDatabase : RoomDatabase() {
                 INSTANCE?.let { database ->
                     scope.launch(Dispatchers.IO) {
 //                        populateDatabase(database.PersonDao())
-                        Log.d(":d", "D")
+//                        Log.d(":d", "D")
                     }
                 }
 
