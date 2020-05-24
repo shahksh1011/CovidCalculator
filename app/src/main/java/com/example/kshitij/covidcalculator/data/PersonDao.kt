@@ -16,3 +16,16 @@ interface PersonDao {
     @Query("DELETE FROM covid_table")
     fun deleteAll()
 }
+
+@Dao
+interface PersonHealthDao{
+    @Query
+    ("SELECT * from covid_health_entry_table WHERE personId LIKE '% :personId %' ")
+    fun getAllHealthData():LiveData<List<PersonHealthData>>
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    fun insert(personHealthData: PersonHealthData)
+
+    @Query("DELETE FROM covid_health_entry_table")
+    fun deleteAll()
+}
