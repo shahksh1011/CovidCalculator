@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "579035389247",
+    "firebase_url": "https://covidfamilytracker.firebaseio.com",
+    "project_id": "covidfamilytracker",
+    "storage_bucket": "covidfamilytracker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579035389247:android:b93e5b5dae46eaadf8c78a",
+        "android_client_info": {
+          "package_name": "com.example.kshitij.covidcalculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "579035389247-eecm1e4eodc1qcpslt042n014p925pdv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kshitij.covidcalculator",
+            "certificate_hash": "4a9665b5aeacea28eeced6b359ae5e0790b91292"
+          }
+        },
+        {
+          "client_id": "579035389247-re13duq8p2nvf9buedr95algeo7ncmsl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJxSPiv4QUDvlkW5K5mQ3a5Ox6twKj1fk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "579035389247-re13duq8p2nvf9buedr95algeo7ncmsl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
