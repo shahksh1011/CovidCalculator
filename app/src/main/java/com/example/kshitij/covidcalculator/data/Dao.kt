@@ -20,7 +20,7 @@ interface PersonDao {
 @Dao
 interface PersonHealthDao{
     @Query
-    ("SELECT * from covid_health_entry_table WHERE personId LIKE '% :personId %' ")
+    ("SELECT * from covid_health_entry_table WHERE personId LIKE :personId")
     fun getAllHealthData(personId: Int):LiveData<List<PersonHealthData>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)

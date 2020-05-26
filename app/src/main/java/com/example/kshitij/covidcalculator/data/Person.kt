@@ -5,9 +5,11 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "covid_table")
 data class Person(
-    @PrimaryKey
-    val id: Int,
+
     val firstName: String,
     val lastName: String,
     val age: String
-)
+){
+    @PrimaryKey(autoGenerate = true)
+    var id: Int = 0
+}

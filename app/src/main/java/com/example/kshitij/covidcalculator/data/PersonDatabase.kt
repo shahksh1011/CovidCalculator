@@ -12,7 +12,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 
-@Database(entities = [Person::class], version = 1)
+@Database(entities = arrayOf(Person::class,
+                        PersonHealthData::class),version = 2)
 abstract class PersonDatabase : RoomDatabase() {
     abstract fun PersonHealthDao() : PersonHealthDao
 
