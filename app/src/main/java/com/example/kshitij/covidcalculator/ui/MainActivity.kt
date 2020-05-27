@@ -1,10 +1,12 @@
 package com.example.kshitij.covidcalculator.ui
 
 import android.app.Activity
+import android.app.Application
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -13,7 +15,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.kshitij.covidcalculator.R
 import com.example.kshitij.covidcalculator.adapters.PersonClassAdaper
 import com.example.kshitij.covidcalculator.data.Person
+import com.example.kshitij.covidcalculator.mainModule
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import org.koin.android.ext.koin.androidContext
+
 
 class MainActivity : AppCompatActivity(), PersonClassAdaper.itemcClickListener {
 
@@ -22,6 +27,7 @@ class MainActivity : AppCompatActivity(), PersonClassAdaper.itemcClickListener {
     private lateinit var personViewModel: PersonViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_main)
 
         val recyclerView = findViewById<RecyclerView>(R.id.main_activity_recycler_View)
@@ -39,6 +45,11 @@ class MainActivity : AppCompatActivity(), PersonClassAdaper.itemcClickListener {
         fab.setOnClickListener {
             val intent = Intent(this@MainActivity, NewPersonActivity::class.java)
             startActivityForResult(intent, newPersonActivityCode)
+        }
+        val covidCaseButton = findViewById<Button>(R.id.button_covid_cases_us)
+        covidCaseButton.setOnClickListener {
+            val covidIntent = Intent(this@MainActivity, CovidCasesActivity::class.java)
+            startActivity(covidIntent)
         }
     }
 
