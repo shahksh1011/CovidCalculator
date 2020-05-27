@@ -1,20 +1,17 @@
 package com.example.kshitij.covidcalculator.ui
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
-import android.widget.Toolbar
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kshitij.covidcalculator.R
 import com.example.kshitij.covidcalculator.adapters.HealthClassAdapter
 import com.example.kshitij.covidcalculator.data.Person
+import com.example.kshitij.covidcalculator.viewmodels.PersonGraphViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class PersonGraph : AppCompatActivity() {

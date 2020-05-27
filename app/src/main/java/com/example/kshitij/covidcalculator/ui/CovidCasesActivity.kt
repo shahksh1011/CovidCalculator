@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.kshitij.covidcalculator.R
 import com.example.kshitij.covidcalculator.adapters.CovidCasesAdapter
 import com.example.kshitij.covidcalculator.data.response.CovidUpdateDataItem
+import com.example.kshitij.covidcalculator.viewmodels.CovidCasesViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
 
 

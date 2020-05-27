@@ -1,9 +1,8 @@
 package com.example.kshitij.covidcalculator
 
 import com.example.kshitij.covidcalculator.repositories.CovidUpdateRpository
-import com.example.kshitij.covidcalculator.ui.CovidCasesViewModel
+import com.example.kshitij.covidcalculator.viewmodels.CovidCasesViewModel
 
-import org.koin.android.viewmodel.experimental.builder.viewModel
 import org.koin.android.viewmodel.ext.koin.viewModel
 
 import org.koin.dsl.module.module

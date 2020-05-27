@@ -1,11 +1,9 @@
 package com.example.kshitij.covidcalculator.ui
 
 import android.app.Activity
-import android.app.Application
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import androidx.lifecycle.Observer
@@ -15,9 +13,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.kshitij.covidcalculator.R
 import com.example.kshitij.covidcalculator.adapters.PersonClassAdaper
 import com.example.kshitij.covidcalculator.data.Person
-import com.example.kshitij.covidcalculator.mainModule
+import com.example.kshitij.covidcalculator.viewmodels.PersonViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import org.koin.android.ext.koin.androidContext
 
 
 class MainActivity : AppCompatActivity(), PersonClassAdaper.itemcClickListener {

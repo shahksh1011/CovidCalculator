@@ -1,4 +1,4 @@
-package com.example.kshitij.covidcalculator.ui
+package com.example.kshitij.covidcalculator.viewmodels
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
