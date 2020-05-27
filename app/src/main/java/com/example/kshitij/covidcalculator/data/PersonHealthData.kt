@@ -2,9 +2,6 @@ package com.example.kshitij.covidcalculator.data
 
 import androidx.room.*
 import java.io.Serializable
-import java.sql.Date
-import java.time.OffsetDateTime
-import java.time.format.DateTimeFormatter
 
 
 @Entity(tableName = "covid_health_entry_table",
@@ -17,10 +14,10 @@ import java.time.format.DateTimeFormatter
             onDelete = ForeignKey.CASCADE)
     ]
 )
-data class PersonHealthData (
+data class PersonHealthData(
 
-    val bodyTemperature: Int,
-    val oxygenLevel: Int,
+    val bodyTemperature: String?,
+    val oxygenLevel: String?,
     val personId: Int
 //    val date: java.util.Date?=null
 

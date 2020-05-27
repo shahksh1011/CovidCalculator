@@ -17,7 +17,7 @@ class CovidCasesAdapter internal constructor(
 
     inner class CovidCasesViewHolder(itemView:View): RecyclerView.ViewHolder(itemView) {
         val stateName = itemView.findViewById<TextView>(R.id.text_state)
-
+        val recDate = itemView.findViewById<TextView>(R.id.text_record_date)
         val recoveredCases = itemView.findViewById<TextView>(R.id.text_total_recovered)
         val totalCases = itemView.findViewById<TextView>(R.id.text_total)
         val totalDeaths = itemView.findViewById<TextView>(R.id.text_total_deaths)
@@ -35,12 +35,12 @@ class CovidCasesAdapter internal constructor(
 
     override fun onBindViewHolder(holder: CovidCasesViewHolder, position: Int) {
         val current = caseList[position]
-        holder.stateName.text = current.countrycode
+        holder.stateName.text = "Country Code: " + current.countrycode
+        holder.recDate.text = "Date: " + current.date
 
-
-        holder.recoveredCases.text = current.recovered
-        holder.totalCases.text = current.cases
-        holder.totalDeaths.text = current.deaths
+        holder.recoveredCases.text ="Recovered Cases: " + current.recovered
+        holder.totalCases.text = "Total Cases: "+ current.cases
+        holder.totalDeaths.text = "Total Dealths: " + current.deaths
 
 
     }

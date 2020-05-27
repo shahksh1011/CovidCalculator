@@ -6,4 +6,5 @@
     <string name="age">Age</string>
     <string name="view_graph">View Graph</string>
     <string name="view_usa_covid_cases">View USA Covid Cases</string>
+    <string name="covid_timeline">Covid Timeline</string>
 </resources>

@@ -38,8 +38,8 @@ class HealthClassAdapter internal constructor(
 
     override fun onBindViewHolder(holder: HealthClassViewHolder, position: Int) {
         val current = healthList[position]
-        holder.healthTemp.text = current.bodyTemperature.toString()
-        holder.oxygenLevel.text = current.oxygenLevel.toString()
+        holder.healthTemp.text = "Body Temp: " + current.bodyTemperature.toString()
+        holder.oxygenLevel.text = "Oxygen Level: " + current.oxygenLevel.toString()
     }
 
 }

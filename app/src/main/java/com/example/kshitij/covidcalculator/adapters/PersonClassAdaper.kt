@@ -26,7 +26,7 @@ class PersonClassAdaper internal constructor(
         val personAge: TextView = itemView.findViewById(R.id.person_age)
 
         fun bind(person: Person, clickListener: PersonClassAdaper.itemcClickListener){
-            personAge.text = person.age
+            personAge.text = "Age: " + person.age
             personItemView.text = person.firstName + " " + person.lastName
             itemView.setOnClickListener {
                 clickListener.onItemClicked(person)
