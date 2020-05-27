@@ -1,12 +1,9 @@
 package com.example.kshitij.covidcalculator.data
 
 import android.content.Context
-import android.database.sqlite.SQLiteOpenHelper
-import android.util.Log
-import androidx.room.Database
-import androidx.room.Room
-import androidx.room.RoomDatabase
+import androidx.room.*
 import androidx.sqlite.db.SupportSQLiteDatabase
+import com.example.kshitij.covidcalculator.utilities.Converter
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -14,6 +11,8 @@ import kotlinx.coroutines.launch
 
 @Database(entities = arrayOf(Person::class,
                         PersonHealthData::class),version = 2)
+@TypeConverters(Converter::class)
+
 abstract class PersonDatabase : RoomDatabase() {
     abstract fun PersonHealthDao() : PersonHealthDao
 

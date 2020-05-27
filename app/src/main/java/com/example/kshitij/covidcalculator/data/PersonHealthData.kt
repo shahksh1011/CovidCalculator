@@ -1,12 +1,30 @@
 package com.example.kshitij.covidcalculator.data
 
-import androidx.room.Entity
-import androidx.room.PrimaryKey
+import androidx.room.*
+import java.io.Serializable
+import java.sql.Date
+import java.time.OffsetDateTime
+import java.time.format.DateTimeFormatter
 
-@Entity(tableName = "covid_health_entry_table")
-data class PersonHealthData (
-    @PrimaryKey
-    val personId:Int,
-    val bodyTemperature: Int,
-    val oxygenLevel: Int
+
+@Entity(tableName = "covid_health_entry_table",
+    foreignKeys = [
+        ForeignKey(
+            entity = Person::class,
+            parentColumns = ["id"],
+            childColumns = ["personId"],
+            onUpdate = ForeignKey.CASCADE,
+            onDelete = ForeignKey.CASCADE)
+    ]
 )
+data class PersonHealthData (
+
+    val bodyTemperature: Int,
+    val oxygenLevel: Int,
+    val personId: Int
+//    val date: java.util.Date?=null
+
+): Serializable{
+    @PrimaryKey(autoGenerate = true)
+    var recordId: Int = 0
+}

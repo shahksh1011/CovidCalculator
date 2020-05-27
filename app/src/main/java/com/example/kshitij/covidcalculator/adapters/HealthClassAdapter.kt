@@ -31,6 +31,11 @@ class HealthClassAdapter internal constructor(
         return healthList.size
     }
 
+    internal fun setHealthData(listOfHealthData: List<PersonHealthData>){
+        this.healthList = listOfHealthData
+        notifyDataSetChanged()
+    }
+
     override fun onBindViewHolder(holder: HealthClassViewHolder, position: Int) {
         val current = healthList[position]
         holder.healthTemp.text = current.bodyTemperature.toString()

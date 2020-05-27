@@ -54,8 +54,6 @@ class MainActivity : AppCompatActivity(), PersonClassAdaper.itemcClickListener {
                 val person = Person(firstName.toString(), lastName.toString(), age.toString())
                 personViewModel.insert(person)
                 personClassAdaper.notifyDataSetChanged()
-
-
             }
         }else{
             Toast.makeText(
@@ -67,7 +65,12 @@ class MainActivity : AppCompatActivity(), PersonClassAdaper.itemcClickListener {
     }
 
     override fun onItemClicked(person: Person) {
-        Toast.makeText(this, "Click " + person.firstName, Toast.LENGTH_LONG).show()
+
+        val intent = Intent(this, PersonGraph::class.java)
+        val bundle: Bundle = Bundle()
+        bundle.putSerializable("personData", person)
+        intent.putExtra("Person", bundle)
+        startActivity(intent)
     }
 
 }
